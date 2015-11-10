@@ -1,0 +1,75 @@
+.acf-smart-button .hidden{
+  display: none;
+}
+
+.acf-smart-button td{
+  padding-right: 10px;
+}
+
+.acf-smart-button label{
+  padding-bottom: 5px;
+  color: #999;
+  display: block;
+}
+
+.acf-smart-button .switch{
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.acf-smart-button-fields .acf-field-post-object, .acf-smart-button-fields input.external {
+	margin: 0;
+	min-width: 200px;
+}
+
+.acf-smart-button-fields td > label {
+	margin-bottom: 10px;
+	display: inline-block;
+}
+
+.acf-smart-button-fields td {
+	padding-right: 10px;
+}
+
+.button-link-switch-text {
+	display: inline-block;
+	position: relative;
+	top: -12px;
+	margin-right: 10px;
+}
+
+.button-link-switch {
+	display: inline-block;
+    position: relative; width: 50px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.button-link-switch-checkbox {
+    display: none !important;
+}
+.button-link-switch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    height: 25px; padding: 0; line-height: 25px;
+    border: 1px solid #999999; border-radius: 25px;
+    background-color: #EEEEEE;
+    transition: background-color 0.2s ease;
+}
+.button-link-switch-label:before {
+    content: "";
+    display: block; width: 25px; margin: 0px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 23px;
+    border: 1px solid #999999; border-radius: 25px;
+    transition: all 0.2s ease 0s;
+}
+.button-link-switch-checkbox:checked + .button-link-switch-label {
+    background-color: #00a0d2;
+}
+
+.button-link-switch-checkbox:checked + .button-link-switch-label, .button-link-switch-checkbox:checked + .button-link-switch-label:before {
+   border-color: #00a0d2;
+}
+
+.button-link-switch-checkbox:checked + .button-link-switch-label:before {
+    right: 0px;
+}
