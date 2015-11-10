@@ -19,7 +19,7 @@ It always returns the url as the same field, wheter its the internal or external
 
 ### When External
 [text] => I am an external Buttonse  
-[link] => https://kollektiv.ag  
+[link] => http://kollektiv.ag  
 [post_id] => false  
 [url] => http://kollektiv.ag  
 [use_external] => false
