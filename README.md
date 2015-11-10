@@ -30,7 +30,7 @@ It always returns the url as the same field, wheter its the internal or external
 
 ## Compatibility
 
-This add-on works onle with version 4 and up.
+This add-on works only with version 5 and up.
 
 ## Installation
 
