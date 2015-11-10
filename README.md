@@ -7,17 +7,17 @@ It always returns the url as the same field, wheter its the internal or external
 ## Output / Return
 
 ### When Internal
-[text] => I am an internal Buttonse
-[link] => false
-[post_id] => 2
-[url] => http://yoursite.dev/selected-page
+[text] => I am an internal Buttonse  
+[link] => false  
+[post_id] => 2  
+[url] => http://yoursite.dev/selected-page  
 [use_external] => true
 
 ### When External
-[text] => I am an external Buttonse
-[link] => https://kollektiv.ag
-[post_id] => false
-[url] => http://kollektiv.ag
+[text] => I am an external Buttonse  
+[link] => https://kollektiv.ag  
+[post_id] => false  
+[url] => http://kollektiv.ag  
 [use_external] => false
 
 ## Future Plans
