@@ -168,8 +168,11 @@ class acf_field_smart_button extends acf_field {
 						<label>Use external Link</label>
 						<div class="switcher">
 							<div class="button-link-switch">
-							    <input type="checkbox" name="<?php echo $field_name; ?>[use_external]" class="button-link-switch-checkbox" id="use_external" <?php if($field['value']['use_external']) { echo 'checked'; } ?>>
-							    <label class="button-link-switch-label" for="use_external"></label>
+								<?php
+									$swticher_id = $field['id'] . '[use_external_swichter]';
+								?>
+							    <input type="checkbox" name="<?php echo $field_name; ?>[use_external]" class="button-link-switch-checkbox" id="<?php echo $swticher_id; ?>" <?php if($field['value']['use_external']) { echo 'checked'; } ?>>
+							    <label class="button-link-switch-label" for="<?php echo $swticher_id; ?>"></label>
 							</div>
 						</div>
 					</td>

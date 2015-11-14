@@ -6,7 +6,9 @@
 		// define vars
 		var $checkbox = $el.find('#use_external'),
 			$internal = $el.find('.internal'),
-			$external = $el.find('.external');
+			$external = $el.find('.external'),
+			$switcherInput = $el.find('.switcher input'),
+			$switcherLabel = $el.find('.switcher label');
 
 		// listen to checkbox change
 		$checkbox.change(function() {
@@ -22,6 +24,9 @@
 
 		// trigger change on init to respect current state
 		$checkbox.trigger('change');
+
+		// sync id and for, for the label to work
+		$switcherLabel.attr('for', $switcherInput.attr('id'));
 
 	}
 
