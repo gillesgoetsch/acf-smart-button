@@ -146,7 +146,7 @@ class acf_field_smart_button extends acf_field {
 							));
 						?>
 					</td>
-					<td valign="top" class="internal <?php echo $internal_class; ?>">
+					<td valign="top" class="internal">
 						<label>Internal Link</label>
 						<div class="acf-field acf-field-post-object" data-name="<?php echo $field['_name']; ?>[post_id]" data-type="post_object" data-key="<?php echo $field['key']; ?>">
 							<div class="acf-input">

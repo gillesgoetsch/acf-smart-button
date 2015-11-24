@@ -4,7 +4,7 @@
 	function initialize_field( $el ) {
 
 		// define vars
-		var $checkbox = $el.find('#use_external'),
+		var $checkbox = $el.find('.button-link-switch-checkbox'),
 			$internal = $el.find('.internal'),
 			$external = $el.find('.external'),
 			$switcherInput = $el.find('.switcher input'),
