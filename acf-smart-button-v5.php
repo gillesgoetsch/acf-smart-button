@@ -136,11 +136,12 @@ class acf_field_smart_button extends acf_field {
 					<td valign="top" class="external hidden">
 						<label>External Link</label>
 						<?php
+
 							do_action('acf/render_field/type=url', array(
 								'type' => 'text',
 								'name' => $field_name . '[link]',
 								'value' => $field['value']['link'],
-								'id' => 'external',
+								'id' => $field_name.'_external',
 								'class' => 'external',
 								'placeholder' => ''
 							));
@@ -151,14 +152,15 @@ class acf_field_smart_button extends acf_field {
 						<div class="acf-field acf-field-post-object" data-name="<?php echo $field['_name']; ?>[post_id]" data-type="post_object" data-key="<?php echo $field['key']; ?>">
 							<div class="acf-input">
 							<?php
+
 								$types = array('post', 'page');
 
-								do_action('acf/render_field/type=post_object', array(
+								@do_action('acf/render_field/type=post_object', array(
 									'name' => $field_name . '[post_id]',
 									'value' => $field['value']['post_id'],
-									'post_type' => $types,
-									'_name' => 'acf[' . $field['_name'] . '][post_id]',
-									'key' => 'acf[' . $field['key'] . '][post_id]'
+									'post_type' => $types
+									//'_name' => 'acf[' . $field['_name'] . '][post_id]',
+									//'key' => 'acf[' . $field['key'] . '][post_id]'
 								));
 							?>
 							</div>
