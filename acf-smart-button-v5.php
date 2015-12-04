@@ -417,12 +417,19 @@ class acf_field_smart_button extends acf_field {
 		// return url always as same data field, overwrite use_external with true or false for further processing
 		// MAYBE: Return target="_blank" html as separate field to make the view even leaner
 		if(!array_key_exists('use_external', $value)) {
+			// internal
 			$value['url'] = get_permalink($value['post_id']);
-			$value['use_external'] = false;
+			$value['target'] = ''; // empty target
 		} else {
+			// external
 			$value['url'] = $value['link'];
-			$value['use_external'] = true;
+			$value['target'] = 'target="_blank"'; // set to open in a new window if external
 		}
+
+		// unsed fields that are not needed (or do you?)
+		unset($value['link']);
+		unset($value['post_id']);
+		unset($value['use_external']);
 
 		return $value;
 	}
