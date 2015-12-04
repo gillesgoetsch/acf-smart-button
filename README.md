@@ -2,33 +2,36 @@
 
 A simple, clean and lean acf Field that allows the user to select an internal link as a post_object or an external link as a url field via a smooth toggle.
 
-It always returns the url as the same field, wheter its the internal or external link. With 'use_external' you can additionaly case a target="_blank" in your template.
+It always returns the url as the same field, wheter its the internal or external link. With button.target you can additionaly add target="_blank" in your template without additional casing.  
 
 ![alt tag](https://cloud.githubusercontent.com/assets/2161918/11077731/e4106c2e-8801-11e5-8c71-ef265a428a3c.png)
 
 ![alt tag](https://cloud.githubusercontent.com/assets/2161918/11077733/e5643a06-8801-11e5-93f2-b99aba00e971.png)
 
+Example (twig style):  
+
+```
+<a href="{{ button.url }}" {{button.target }}>{{ button.text }}</a>
+```
+  
+Isn't that lean =)?
+
 ## Output / Return
 
 ### When Internal
-[text] => I am an internal Buttonse  
-[link] => false  
-[post_id] => 2  
+[text] => I am an internal Buttonse   
 [url] => http://yoursite.dev/selected-page  
-[use_external] => true
+[target] => ''
 
 ### When External
 [text] => I am an external Buttonse  
-[link] => http://kollektiv.ag  
-[post_id] => false  
 [url] => http://kollektiv.ag  
-[use_external] => false
+[target] => 'target="blank"'
 
 ## Future Plans
 - option to select allowed post_types for post_object selector
 - language support
 - validate url field
-- target="_blank" as return string to make your view even leaner
 - cleanups etc.
 - eventually acf4 support
 
