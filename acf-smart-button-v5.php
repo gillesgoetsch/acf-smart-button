@@ -418,8 +418,19 @@ class acf_field_smart_button extends acf_field {
 		// MAYBE: Return target="_blank" html as separate field to make the view even leaner
 		if(!array_key_exists('use_external', $value)) {
 			// internal
-			$value['url'] = get_permalink($value['post_id']);
-			$value['target'] = ''; // empty target
+			if( !empty($value['post_id']) ) {
+				$value['url'] = ( !empty($value['post_id']) ? get_permalink($value['post_id']) : '' );
+			} else {
+				unset($value['url']);
+			}
+			if( empty($value['text']) ) {
+				unset($value['text']);
+			}
+			if( empty($value['text']) && empty($value['post_id']) ) {
+				unset($value['target']);
+			} else {
+				$value['target'] = ''; // empty target
+			}
 		} else {
 			// external
 			$value['url'] = $value['link'];
@@ -430,7 +441,12 @@ class acf_field_smart_button extends acf_field {
 		unset($value['link']);
 		unset($value['post_id']);
 		unset($value['use_external']);
-
+		
+		// return false no value is set
+		if( empty($value) ) {
+			return false;
+		}
+		
 		return $value;
 	}
 
