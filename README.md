@@ -11,7 +11,9 @@ It always returns the url as the same field, wheter its the internal or external
 Example (twig style):  
 
 ```
-<a href="{{ button.url }}" {{button.target }}>{{ button.text }}</a>
+{% if button %}   
+<a href="{{ button.url }}" {{button.target }}>{{ button.text }}</a>   
+{% endif %}
 ```
   
 Isn't that lean =)?
