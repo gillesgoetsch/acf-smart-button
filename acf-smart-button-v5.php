@@ -414,39 +414,36 @@ class acf_field_smart_button extends acf_field {
 
 	function format_value( $value, $post_id, $field ) {
 
+		// directly return false if there is no button text. A button is only valid if there is a valid text and url
+		if( empty($value['text']) ) {
+			return false;
+		}
+
 		// return url always as same data field, overwrite use_external with true or false for further processing
-		// MAYBE: Return target="_blank" html as separate field to make the view even leaner
+		// Returns target="_blank" html as separate field to make the view even leaner
 		if(!array_key_exists('use_external', $value)) {
 			// internal
-			if( !empty($value['post_id']) ) {
-				$value['url'] = ( !empty($value['post_id']) ? get_permalink($value['post_id']) : '' );
-			} else {
-				unset($value['url']);
-			}
-			if( empty($value['text']) ) {
-				unset($value['text']);
-			}
-			if( empty($value['text']) && empty($value['post_id']) ) {
-				unset($value['target']);
-			} else {
-				$value['target'] = ''; // empty target
+			if( empty($value['post_id']) ) { // return false if there is no post_id
+				return false;
+			}else { // add the values
+				$value['url'] = get_permalink($value['post_id']);
+				$value['target'] = ''; // empty target, is an empty string on purpose
 			}
 		} else {
 			// external
-			$value['url'] = $value['link'];
-			$value['target'] = 'target="_blank"'; // set to open in a new window if external
+			if( empty($value['link']) ) { // return false if there is no link
+				return false;
+			}else { // add the values
+				$value['url'] = $value['link'];
+				$value['target'] = 'target="_blank"'; // set to open in a new window if external
+			}
 		}
 
 		// unsed fields that are not needed (or do you?)
 		unset($value['link']);
 		unset($value['post_id']);
 		unset($value['use_external']);
-		
-		// return false no value is set
-		if( empty($value) ) {
-			return false;
-		}
-		
+
 		return $value;
 	}
 
