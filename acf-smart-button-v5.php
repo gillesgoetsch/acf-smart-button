@@ -158,7 +158,8 @@ class acf_field_smart_button extends acf_field {
 								@do_action('acf/render_field/type=post_object', array(
 									'name' => $field_name . '[post_id]',
 									'value' => $field['value']['post_id'],
-									'post_type' => $types
+									'post_type' => $types,
+									'allow_null' => 1
 									//'_name' => 'acf[' . $field['_name'] . '][post_id]',
 									//'key' => 'acf[' . $field['key'] . '][post_id]'
 								));
