@@ -12,24 +12,27 @@
 
 		// listen to checkbox change
 		$checkbox.change(function() {
-	        if($(this).is(":checked")) {
-	            $internal.hide();
-	            $external.show();
-	            $external.find('input').show();
-	        } else {
-	        	$internal.show();
-	        	$external.hide();
-	        }
+	        helperCheckboxChange(this, $internal, $external);
 	    });
 
-		// trigger change on init to respect current state
-		$checkbox.trigger('change');
+		// trigger change function on init to respect current state (do not trigger change event as this provokes browser alert on window close)
+		helperCheckboxChange($checkbox, $internal, $external);
 
 		// sync id and for, for the label to work
 		$switcherLabel.attr('for', $switcherInput.attr('id'));
 
 	}
 
+	function helperCheckboxChange(_self, $internal, $external) {
+		if($(_self).is(":checked")) {
+            $internal.hide();
+            $external.show();
+            $external.find('input').show();
+        } else {
+        	$internal.show();
+        	$external.hide();
+        }
+	}
 
 	if( typeof acf.add_action !== 'undefined' ) {
 
