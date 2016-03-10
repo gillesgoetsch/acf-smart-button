@@ -18,6 +18,17 @@ Example (twig style):
   
 Isn't that lean =)?
 
+Example (vanilla PHP):  
+
+```
+if ( get_field( 'acf_button_field' ) ) : 
+$button = get_field( 'acf_button_field' );
+$button_label = $button['text'];
+$button_url = $button['url'];
+$button_target = $button['target'];
+endif;
+```
+
 ## Output / Return
 
 ### When Internal
