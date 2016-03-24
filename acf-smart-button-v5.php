@@ -149,10 +149,13 @@ class acf_field_smart_button extends acf_field {
 					</td>
 					<td valign="top" class="internal">
 						<label>Internal Link</label>
-						<div class="acf-field acf-field-post-object" data-name="<?php echo $field['_name']; ?>[post_id]" data-type="post_object" data-key="<?php echo $field['key']; ?>">
+						<?php
+							// str replace to get raw key (there seems to be no other way?)
+							$field_raw_key = str_replace('field_', '', $field['key']);
+						?>
+						<div class="acf-field acf-field-<?php echo $field_raw_key; ?> acf-field-post-object" data-name="<?php echo $field['_name']; ?>[post_id]" data-type="post_object" data-key="<?php echo $field['key']; ?>">
 							<div class="acf-input">
 							<?php
-
 								$types = array('post', 'page');
 
 								@do_action('acf/render_field/type=post_object', array(
