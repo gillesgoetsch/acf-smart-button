@@ -41,6 +41,8 @@ endif;
 [url] => http://kollektiv.ag  
 [target] => 'target="blank"'
 
+Note: In both cases the field data will only be returned if the button text is set in combination with a target. If either one is missing, there will be no return.
+
 ## Future Plans
 - option to select allowed post_types for post_object selector
 - language support
