@@ -73,3 +73,8 @@
 .button-link-switch-checkbox:checked + .button-link-switch-label:before {
     right: 0px;
 }
+
+#side-sortables .acf-smart-button-fields td {
+    width: 100%;
+    float: left;
+}
