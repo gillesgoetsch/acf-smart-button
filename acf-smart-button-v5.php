@@ -94,16 +94,17 @@ class acf_field_smart_button extends acf_field {
 
 		$field = array_merge($this->defaults, $field);
 
+		/* add option to select which post type should be used on the post object. default: all */
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Filter by Post Type','acf'),
-			'instructions'	=> '',
-			'type'			=> 'select',
-			'name'			=> 'post_type',
-			'choices'		=> acf_get_pretty_post_types(),
-			'multiple'		=> 1,
-			'ui'			=> 1,
-			'allow_null'	=> 1,
-			'placeholder'	=> __("All post types",'acf'),
+			'label'	=> __('Filter by Post Type','acf'),
+			'instructions' => '',
+			'type' => 'select',
+			'name' => 'post_type',
+			'choices' => acf_get_pretty_post_types(),
+			'multiple' => 1,
+			'ui' => 1,
+			'allow_null' => 1,
+			'placeholder' => __("All post types",'acf'),
 		));
 
 	}
