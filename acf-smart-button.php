@@ -10,9 +10,17 @@
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
-// 1. set text domain
+
 // Reference: https://codex.wordpress.org/Function_Reference/load_plugin_textdomain
-load_plugin_textdomain( 'acf-button', false, dirname( plugin_basename(__FILE__) ) . '/lang/' );
+add_action( 'init', 'acf_smart_button_load_textdomain' );
+/**
+ * Load plugin textdomain.
+ *
+ * @since 1.0.0
+ */
+function acf_smart_button_load_textdomain() {
+ load_plugin_textdomain( 'acf-smart-button', false, dirname( plugin_basename(__FILE__) ) . '/lang/' );
+}
 
 // 2. Include field type for ACF5
 // $version = 5 and can be ignored until ACF6 exists

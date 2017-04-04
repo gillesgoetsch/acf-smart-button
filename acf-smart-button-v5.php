@@ -143,11 +143,11 @@ class acf_field_smart_button extends acf_field {
 			<table class="acf-smart-button-fields">
 				<tr>
 					<td valign="top">
-						<label>Text</label>
+						<label><?php _e('text', 'acf-smart-button'); ?></label>
 						<input type="text" value="<?php echo esc_attr( $field['value']['text'] ); ?>" name="<?php echo $field_name; ?>[text]" class="text" />
 					</td>
 					<td valign="top" class="external hidden">
-						<label>External Link</label>
+						<label><?php _e('External Link', 'acf-smart-button'); ?></label>
 						<?php
 
 							do_action('acf/render_field/type=url', array(
@@ -161,7 +161,7 @@ class acf_field_smart_button extends acf_field {
 						?>
 					</td>
 					<td valign="top" class="internal">
-						<label>Internal Link</label>
+						<label><?php _e('Internal Link', 'acf-smart-button'); ?></label>
 						<?php
 							// str replace to get raw key (there seems to be no other way?)
 							$field_raw_key = str_replace('field_', '', $field['key']);
@@ -184,7 +184,7 @@ class acf_field_smart_button extends acf_field {
 						</div>
 					</td>
 					<td>
-						<label>Use external Link</label>
+						<label><?php _e('Use external Link', 'acf-smart-button'); ?></label>
 						<div class="switcher">
 							<div class="button-link-switch">
 								<?php
