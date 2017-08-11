@@ -169,12 +169,12 @@ class acf_field_smart_button extends acf_field {
 						<div class="acf-field acf-field-<?php echo $field_raw_key; ?> acf-field-post-object" data-name="<?php echo $field['_name']; ?>[post_id]" data-type="post_object" data-key="<?php echo $field['key']; ?>">
 							<div class="acf-input">
 							<?php
-								$types = array('post', 'page');
+								// $types = array('post', 'page');
 
 								@do_action('acf/render_field/type=post_object', array(
 									'name' => $field_name . '[post_id]',
 									'value' => $field['value']['post_id'],
-									'post_type' => $types,
+									// 'post_type' => $types, // Removed so the selection isn't restricted to just posts and pages
 									'allow_null' => 1
 									//'_name' => 'acf[' . $field['_name'] . '][post_id]',
 									//'key' => 'acf[' . $field['key'] . '][post_id]'
