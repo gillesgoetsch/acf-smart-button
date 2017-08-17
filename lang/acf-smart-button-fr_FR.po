@@ -1,0 +1,77 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Advanced Custom Fields: Smart Button\n"
+"POT-Creation-Date: 2017-06-02 16:03+0100\n"
+"PO-Revision-Date: 2017-06-02 17:23+0200\n"
+"Last-Translator: Julien Maury\n"
+"Language-Team: Be API\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: acf-smart-button.php\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;"
+"esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;"
+"__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: acf-smart-button-v5.php:32
+msgid "Smart Button"
+msgstr "Bouton Smart"
+
+#: acf-smart-button-v5.php:55
+msgid "Error! Please enter a higher value"
+msgstr "Erreur! SVP entrez une valeur plus élevée"
+
+#: acf-smart-button-v5.php:99
+msgid "Filter by Post Type"
+msgstr "Filtrer par type de contenu"
+
+#: acf-smart-button-v5.php:107
+msgid "All post types"
+msgstr "Tous les types de contenu"
+
+#: acf-smart-button-v5.php:146
+msgid "text"
+msgstr "texte"
+
+#: acf-smart-button-v5.php:150
+msgid "External Link"
+msgstr "Lien externe"
+
+#: acf-smart-button-v5.php:164
+msgid "Internal Link"
+msgstr "Lien interne"
+
+#: acf-smart-button-v5.php:187
+msgid "Use external Link"
+msgstr "Utiliser un lien externe"
+
+#. Plugin Name of the plugin/theme
+msgid "Advanced Custom Fields: Smart Button"
+msgstr "Advanced Custom Fields: Bouton smart"
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/gillesgoetsch//acf-smart-button"
+msgstr "https://github.com/gillesgoetsch//acf-smart-button"
+
+#. Description of the plugin/theme
+msgid ""
+"A button field that lets you choose between internal and external and gives you either a post_object "
+"or a url field"
+msgstr ""
+"Un champ bouton qui vous permet de choisir entre un lien interne et un lien externe et vous donne le "
+"choix entre un objet post (post_object) ou un champ URL."
+
+#. Author of the plugin/theme
+msgid "Gilles Goetsch"
+msgstr "Gilles Goetsch"
+
+#. Author URI of the plugin/theme
+msgid "http://kollektiv.ag"
+msgstr "http://kollektiv.ag"
