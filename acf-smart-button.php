@@ -3,9 +3,9 @@
 	Plugin Name: Advanced Custom Fields: Smart Button
 	Plugin URI: https://github.com/gillesgoetsch//acf-smart-button
 	Description: A button field that lets you choose between internal and external and gives you either a post_object or a url field
-	Version: 1.0.1
+	Version: 1.0.2
 	Author: Gilles Goetsch
-	Author URI: http://kollektiv.ag
+	Author URI: https://gillesgoetsch.ch
 	License: GPLv2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
