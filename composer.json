@@ -2,7 +2,7 @@
   "name": "gillesgoetsch/acf-smart-button",
   "description": "A simple, clean and lean acf Field for internal and external links.",
   "keywords": ["wordpress", "plugin", "acf", "button"],
-  "license": "GPLv2",
+  "license": "GPLv2.0+",
   "authors": [
     {
       "name": "Gilles Goetsch",
