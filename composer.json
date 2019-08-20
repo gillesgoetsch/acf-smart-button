@@ -1,14 +1,13 @@
 {
   "name": "gillesgoetsch/acf-smart-button",
-  "description": "A simple, clean and lean acf Field for internal and external links.",
+  "version": "1.0.4",
+  "description": "A simple, clean and lean ACF Field for internal and external links.",
   "keywords": ["wordpress", "plugin", "acf", "button"],
   "license": "GPLv2.0+",
-  "authors": [
-    {
-      "name": "Gilles Goetsch",
-      "homepage": "https://gillesgoetsch.ch"
-    }
-  ],
+  "authors": [{
+    "name": "Gilles Goetsch",
+    "homepage": "https://gillesgoetsch.ch"
+  }],
   "type": "wordpress-plugin",
   "require": {
     "php": ">=5.3.2"
