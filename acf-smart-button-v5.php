@@ -143,7 +143,7 @@ class acf_field_smart_button extends acf_field {
 			<table class="acf-smart-button-fields">
 				<tr>
 					<td valign="top">
-						<label><?php _e('text', 'acf-smart-button'); ?></label>
+						<label><?php _e('Text', 'acf-smart-button'); ?></label>
 						<input type="text" value="<?php echo esc_attr( $field['value']['text'] ); ?>" name="<?php echo $field_name; ?>[text]" class="text" />
 					</td>
 					<td valign="top" class="external hidden">
@@ -184,7 +184,7 @@ class acf_field_smart_button extends acf_field {
 						</div>
 					</td>
 					<td>
-						<label><?php _e('Use external Link', 'acf-smart-button'); ?></label>
+						<label><?php _e('Use External Link', 'acf-smart-button'); ?></label>
 						<div class="switcher">
 							<div class="button-link-switch">
 								<?php
