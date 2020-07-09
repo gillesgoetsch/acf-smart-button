@@ -7,11 +7,13 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-SHORT_DESCRIPTION
+A simple, clean and lean ACF Field that allows the user to select an internal link as a post_object or an external link as a url field via a smooth toggle.
 
 == Description ==
 
-EXTENDED_DESCRIPTION
+A simple, clean and lean ACF Field that allows the user to select an internal link as a post_object or an external link as a url field via a smooth toggle.
+
+It always returns the url as the same field, whether it's an internal or external link. With button.target you can additionally add target="_blank" in your template without additional casing.
 
 = Compatibility =
 

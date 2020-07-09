@@ -1,36 +1,46 @@
 /* General Styles */
+.acf-smart-button-fields {
+  width: 100%;
+  max-width: 700px;
+}
 
-.acf-smart-button .hidden{
+.acf-smart-button .hidden {
   display: none;
 }
 
-.acf-smart-button td{
+.acf-smart-button td {
   padding-right: 10px;
 }
 
-.acf-smart-button label{
-  padding-bottom: 5px;
-  color: #999;
+.acf-smart-button label {
   display: block;
+  color: #999;
+  padding-bottom: 5px;
 }
 
-.acf-smart-button .switch{
+.acf-smart-button .switch {
   margin-top: 20px;
   margin-bottom: 0;
 }
 
 .acf-smart-button-fields .acf-field-post-object, .acf-smart-button-fields input.external {
-  margin: 0;
   min-width: 200px;
+  padding-left: 25px;
+  margin: 0;
 }
 
 .acf-smart-button-fields .acf-field-post-object.acf-field {
-  padding: 0  !important;
+  padding: 0 !important;
+}
+
+.acf-smart-button-fields .acf-field-post-object.acf-field .select2-selection {
+  border: 1px solid #ddd;
+  border-radius: 0;
 }
 
 .acf-smart-button-fields td > label {
-  margin-bottom: 10px;
   display: inline-block;
+  margin-bottom: 10px;
 }
 
 .acf-smart-button-fields td {
@@ -46,60 +56,76 @@
 
 .button-link-switch {
   display: inline-block;
-    position: relative; width: 50px;
-    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+  position: relative;
+  width: 50px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
+
 .button-link-switch-checkbox {
-    display: none !important;
+  display: none !important;
 }
+
 .button-link-switch-label {
-    display: block; overflow: hidden; cursor: pointer;
-    height: 25px; padding: 0; line-height: 25px;
-    border: 1px solid #999999; border-radius: 25px;
-    background-color: #EEEEEE;
-    transition: background-color 0.2s ease;
-    margin-bottom: 0;
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  height: 25px;
+  background-color: #EEEEEE;
+  line-height: 25px;
+  padding: 0;
+  border: 1px solid #999999;
+  border-radius: 25px;
+  margin-bottom: 0;
+  transition: background-color 0.2s ease;
 }
-.button-link-switch-label:before {
-    content: "";
-    display: block; width: 25px; margin: 0px;
-    background: #FFFFFF;
-    position: absolute; top: 0; bottom: 0;
-    right: 23px;
-    border: 1px solid #999999; border-radius: 25px;
-    transition: all 0.2s ease 0s;
+
+.button-link-switch-label::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 23px;
+  width: 25px;
+  background: #FFFFFF;
+  border: 1px solid #999999;
+  border-radius: 25px;
+  margin: 0px;
+  transition: all 0.2s ease 0s;
 }
+
 .button-link-switch-checkbox:checked + .button-link-switch-label {
-    background-color: #00a0d2;
+  background-color: #00a0d2;
 }
 
-.button-link-switch-checkbox:checked + .button-link-switch-label, .button-link-switch-checkbox:checked + .button-link-switch-label:before {
-   border-color: #00a0d2;
+.button-link-switch-checkbox:checked + .button-link-switch-label,
+.button-link-switch-checkbox:checked + .button-link-switch-label::before {
+  border-color: #00a0d2;
 }
 
-.button-link-switch-checkbox:checked + .button-link-switch-label:before {
-    right: 0px;
+.button-link-switch-checkbox:checked + .button-link-switch-label::before {
+  right: 0px;
 }
 
 /* Sidebar Styles */
-
 #side-sortables .acf-smart-button-fields td {
-    width: 100%;
-    float: left;
+  float: left;
+  width: 100%;
 }
 
 /* Gutenberg Layout Styles */
-
 .gutenberg .acf-block-fields .acf-smart-button-fields td {
-    width: 100%;
-    float: left;
-    margin-bottom: 10px;
+  float: left;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .gutenberg .acf-block-fields .acf-smart-button-fields td label {
-    margin-bottom: 0;
-    font-size: 15px;
-    font-weight: 600;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 0;
 }
 
 .gutenberg .acf-block-fields .acf-smart-button-fields .acf-field-post-object {
@@ -107,15 +133,15 @@
 }
 
 .gutenberg .acf-block-fields .acf-smart-button-fields .acf-field-post-object.acf-field {
-  padding: 0 !important;
   font-size: 14px;
+  padding: 0 !important;
 }
 
-.gutenberg .acf-smart-button-fields .button-link-switch-label:before {
+.gutenberg .acf-smart-button-fields .button-link-switch-label::before {
   right: 25px;
 }
 
-.gutenberg .acf-smart-button-fields .button-link-switch-checkbox:checked + .button-link-switch-label:before {
+.gutenberg .acf-smart-button-fields .button-link-switch-checkbox:checked+.button-link-switch-label::before {
   right: 0;
 }
 

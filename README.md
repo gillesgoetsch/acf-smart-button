@@ -1,8 +1,8 @@
 # ACF Smart Button
 
-A simple, clean and lean acf Field that allows the user to select an internal link as a post_object or an external link as a url field via a smooth toggle.
+A simple, clean and lean ACF Field that allows the user to select an internal link as a post_object or an external link as a url field via a smooth toggle.
 
-It always returns the url as the same field, wheter its the internal or external link. With button.target you can additionaly add target="_blank" in your template without additional casing.  
+It always returns the url as the same field, whether it's an internal or external link. With button.target you can additionally add target="_blank" in your template without additional casing.
 
 ![alt tag](https://cloud.githubusercontent.com/assets/2161918/11077731/e4106c2e-8801-11e5-8c71-ef265a428a3c.png)
 
@@ -12,36 +12,36 @@ Example (twig style):
 
 ```
 {% if button %}   
-<a href="{{ button.url }}" {{button.target }}>{{ button.text }}</a>   
+  <a href="{{ button.url }}" {{button.target }}>{{ button.text }}</a>   
 {% endif %}
 ```
-  
+
 Isn't that lean =)?
 
 Example (vanilla PHP):  
 
 ```
-if ( get_field( 'acf_button_field' ) ) : 
-$button = get_field( 'acf_button_field' );
-$button_label = $button['text'];
-$button_url = $button['url'];
-$button_target = $button['target'];
+if ( get_field( 'acf_button_field' ) ) :
+  $button = get_field( 'acf_button_field' );
+  $button_label = $button['text'];
+  $button_url = $button['url'];
+  $button_target = $button['target'];
 endif;
 ```
 
 ## Output / Return
 
 ### When Internal
-[text] => I am an internal Buttonse   
+[text] => I am an internal button   
 [url] => http://yoursite.dev/selected-page  
 [target] => ''
 
 ### When External
-[text] => I am an external Buttonse  
+[text] => I am an external button  
 [url] => http://kollektiv.ag  
 [target] => 'target="blank"'
 
-Note: In both cases the field data will only be returned if the button text is set in combination with a target. If either one is missing, there will be no return.
+**Note:** In both cases the field data will only be returned if the button text is set in combination with a target. If either one is missing, there will be no data returned.
 
 ## Future Plans
 - ~~option to select allowed post_types for post_object selector~~ 7626ad4
